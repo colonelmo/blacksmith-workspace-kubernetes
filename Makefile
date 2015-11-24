@@ -21,4 +21,4 @@ update: update.sh $(WORKSPACE_DIR)/config $(WORKSPACE_DIR)/keyring/keyring.gpg
 	./update.sh $(WORKSPACE_DIR) $(CHANNEL)
 
 clean:
-	rm -f $(ODIR)
+	rm -rf $(WORKSPACE_DIR)
