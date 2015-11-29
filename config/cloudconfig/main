@@ -1,0 +1,11 @@
+<<if (V "flags.me.state") | eq "" >><< S "flags.me.state" "unknown">><<end>>
+<<with $state := (V "flags.me.state")>>
+<<if $state | eq "unknown">>
+<<template "unknown.yaml">>
+<<else if $state | eq "force-init">>
+<<template "force-init.yaml">>
+<<else if $state | eq "inited">>
+<<template "inited.yaml">>
+<<end>>
+<<end>>
+

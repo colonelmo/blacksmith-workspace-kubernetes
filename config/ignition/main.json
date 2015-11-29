@@ -1,0 +1,30 @@
+{
+    "ignitionVersion": 1,
+    "storage": {
+        "disks": [
+            {
+                "device": "/dev/sda",
+                "wipe-table": true,
+                "partitions": [
+                    {
+                        "label": "MAIN",
+                        "number": 1,
+                        "size": 0,
+                        "start": 0
+                    }
+                ]
+            }
+        ],
+        "filesystems": [
+            {
+                "device": "/dev/disk/by-partlabel/MAIN",
+                "format": "ext4",
+                "create": {
+                    "options": [
+                        "--label=ROOT"
+                    ]
+                }
+            }
+        ]
+    }
+}
