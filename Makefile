@@ -4,7 +4,7 @@ CHANNEL=beta
 
 WORKSPACE_DIR=workspace
 
-.PHONY: update clean
+.PHONY: update clean doc
 
 $(WORKSPACE_DIR)/config: config
 	mkdir -p $(WORKSPACE_DIR)
@@ -22,6 +22,9 @@ $(WORKSPACE_DIR)/files:
 
 update: _update.sh $(WORKSPACE_DIR)/config $(WORKSPACE_DIR)/files $(WORKSPACE_DIR)/keyring/keyring.gpg
 	./_update.sh $(WORKSPACE_DIR) $(CHANNEL)
+
+doc: Doc
+	cd Doc && $(MAKE)
 
 clean:
 	rm -rf $(WORKSPACE_DIR)
