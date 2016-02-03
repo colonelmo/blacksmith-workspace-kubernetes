@@ -1,3 +1,3 @@
-# Kubernetes Aghajoon Workspace
+# Kubernetes Blacksmith Workspace
 
-See [Aghajoon](https://github.com/cafebazaar/aghajoon) for now!
+See [Blacksmith](https://github.com/cafebazaar/blacksmith) for now!
